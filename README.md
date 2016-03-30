@@ -10,4 +10,6 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 ## Change it
 
 To change the appearance modify the files in `assets/sass` and recreate
-the CSS with `sass --watch assets/sass:assets/css`.
+the CSS with `sass --watch assets/sass:assets/css`. Convert a big image
+to one suitable for the web with
+`convert pic0N.big.jpg -resize 1600x1050\! pic0N.jpg`.
