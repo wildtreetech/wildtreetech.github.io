@@ -1,0 +1,24 @@
+/*
+	Landed by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+/* Loader */
+body.landing:before, body.landing:after {
+  display: none !important; }
+
+/* Icon */
+.icon.alt {
+  color: inherit !important; }
+.icon.major.alt:before {
+  color: rgba(237, 247, 246, 0.95) !important; }
+
+/* Banner */
+#banner:after {
+  background-color: rgba(23, 24, 32, 0.95); }
+
+/* Footer */
+#footer .icons .icon.alt:before {
+  color: rgba(237, 247, 246, 0.95) !important; }
+
+/*# sourceMappingURL=ie9.css.map */
