@@ -18,3 +18,22 @@
   ga('send', 'pageview');
 
 </script>
+
+<script>
+$(document).ready(function(){
+  $("#submitbutton").click(function(e){
+    e.preventDefault();
+    if ($('#submitbutton').val() === "Done!"){return;}
+    const email = $('#email')[0].value;
+    console.log(email);
+    $.ajax({
+      url: 'http://104.130.22.102:5555/connect',
+      type: 'POST',
+      data: 'them=' + email,
+      success: function(result){
+        $('#submitbutton').val('Done!');
+      }
+    });
+  });
+});
+</script>
