@@ -27,3 +27,8 @@ bundle install
 bundle exec jekyll build --safe
 bundle exec jekyll serve
 ```
+
+
+## Setup from scratch
+
+* Install SASS: `gem install sass`

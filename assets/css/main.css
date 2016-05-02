@@ -1,5 +1,6 @@
 @import url("font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,700,400italic,700italic");
 @import url("https://fonts.googleapis.com/css?family=Fira+Mono:400,700,400italic,700italic");
 /*
 	Landed by HTML5 UP
@@ -1289,14 +1290,14 @@ blockquote {
 code {
   background: rgba(255, 255, 255, 0.075);
   border-radius: 4px;
-  font-family: "Courier New", monospace;
+  font-family: "Fira Mono", "Courier New", monospace;
   font-size: 0.9em;
   margin: 0 0.25em;
   padding: 0.25em 0.65em; }
 
 pre {
   -webkit-overflow-scrolling: touch;
-  font-family: "Courier New", monospace;
+  font-family: "Fira Mono", "Courier New", monospace;
   font-size: 0.9em;
   margin: 0 0 2em 0; }
   pre code {
