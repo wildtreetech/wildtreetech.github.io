@@ -16,12 +16,17 @@ $(document).ready(function(){
     if ($('#submitbutton').val() === "Done!"){return;}
     const email = $('#email')[0].value;
     console.log(email);
+    $('#submitbutton').val('Sending');
     $.ajax({
-      url: 'http://104.130.22.102:5555/connect',
+      //url: 'http://104.130.22.102:5555/connect',
+      url: 'http://wtt-email.herokuapp.com/connect',
       type: 'POST',
       data: 'them=' + email,
       success: function(result){
         $('#submitbutton').val('Done!');
+      },
+      error: function(result){
+        $('#submitbutton').val('Error');
       }
     });
   });
