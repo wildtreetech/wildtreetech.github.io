@@ -1,106 +1,43 @@
 ---
 layout: default
+title: Training
 ---
 
-<!-- Main -->
-<div id="main" class="wrapper style1">
+<div class="primary-banner">
   <div class="container">
-    <header class="major">
-      <h2>Training courses</h2>
-      <p>These courses will bring your staff up to speed with modern
-        data analysis techniques.</p>
-    </header>
-
-    <div class="row 100%">
-      <div class="8u$ -2u 12u$(medium) important(medium)">
-
-        <!-- Content -->
-        <section id="content">
-          <span class="image fit"><img src="/images/training-board.jpg" alt="" /></span>
-          <h3>Passing on my knowledge</h3>
-          <p><strong>Wild Tree Tech</strong> offers
-            custom training on data science, data engineering, and artificial intelligence.
-            The training courses are highly interactive,
-            tailored to the participants and strictly limited to ten people per course.
-            <a href="/index.html#contact">Let's talk!</a>
-          </p>
-          <hr />
-          <h3>Open Courses</h3>
-          <p>Courses open to the public.</p>
-            <h4>Deep learning for developers</h4>
-            <p>
-              A one day course for software developers with no prior
-              machine-learning experience. We will use deep-learning to recognise
-              a player's hand gesture to implement a game of rock-paper-scissors.
-              You will use <a href="https://www.tensorflow.org/">TensorFlow</a>, <a href="https://keras.io">keras</a>,
-              and <a href="#">OpenCV</a>.
-              <br />
-              <em>Next dates: 17th May 2018 and 19th May 2018, <a href="https://docs.google.com/document/d/13Xj5b7j9n0v9aAbGrnEebnJKGuwLf2yE-zU9GfqVx60/edit?usp=sharing">More details and sign up</a>.</em>
-              <br />
-              <em>Price CHF700 excl tax.</em>
-              <br />
-              <em><a href="mailto:{{ site.email }}">Questions?</a></em>
-            </p>
-            <h4>Machine-learning mastery</h4>
-            <p>
-              A two day course for data scientists, data analysts, and business
-              intelligence experts interested in using Python for their day-to-day
-              machine-learning work. The primary focus is on learning to use
-              supervised machine-learning techniques efficiently and effectively.
-              In this course you will learn to master the powerful
-              <a href="http://scikit-learn.org/">scikit-learn</a> library by
-              applying it to real world datasets.
-              <br />
-              <em>Next dates: 24-25th May 2018 and 12-13th July 2018.</em>
-              <br />
-              <em>Price CHF1200 excl tax.</em>
-              <br />
-              <em><a href="mailto:{{ site.email }}">Questions and sign up</a></em>
-            </p>
-          <h3>Inhouse Courses</h3>
-            <p>Book these courses for an in-house training. <a href="/index.html#contact">Let's talk</a>
-                about your companies training needs. Courses with custom content
-                are also available.
-            </p>
-            <h4>Deep learning from scratch</h4>
-            <p>
-              An intense two day course that starts with implementing a deep neural network
-              from scratch and finishes with state of the art tools like <a href="https://www.tensorflow.org/">TensorFlow</a>
-              and <a href="https://keras.io">keras</a>.
-              Designed for working data scientists who want
-              to take their understanding to the next level.
-            </p>
-            <h4>Modern machine-learning for businesses</h4>
-            <p>A two day
-                course that will get you up to speed with modern techniques
-                and libraries. We will cover general techniques, and use
-                <a href="#">pandas</a>,
-                <a href="http://scikit-learn.org/stable/">scikit-learn</a>, <a href="https://www.tensorflow.org/">TensorFlow</a>, and <a href="https://keras.io">keras</a>
-                to build solutions for real world business problems.
-                Designed for professional software developers, data-scientists,
-                scientists, and engineers.
-            </p>
-
-          <hr />
-
-          <p>We believe that the best way to learn is by doing. Come prepared to
-              write code. We will alternate between a short lecture, writing code,
-              and short demos over the course of each day. After each iteration
-              sample solutions are distributed so that at the end of the day
-              you will have a working project.
-          </p>
-          <p>Courses are designed with developers, scientists, engineers,
-            entrepreneurs, financial analysts, and data scientists
-            in mind. Content is fine tuned for each audience.
-            If you would like to learn
-            how to use modern software tools in your specific work
-            environment, you are the target audience!
-          </p>
-          <p>Instructors speak fluent English and German.</p>
-        </section>
-
-      </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+        <h2>Training</h2>
+        <p>These courses will bring your staff up to speed with modern data analysis techniques.</p>
+    	</div>
     </div>
-
   </div>
 </div>
+
+<div class="container workshops" id="main-section">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1 col-sm-12">
+      <div class="row content-section">
+        <div class="col-sm-12">
+          <p>Training workshops give teams a head start when approaching a new technology, leading to dramatically improved productivity.</p>
+          <p>We offer training on data science, data engineering, and artificial intelligence. The training courses are highly interactive, tailored to the participants and strictly limited to ten people per course.</p>
+          <p>Along side our tried and tested courses we offer custom in-house training (contact us for details).</p>
+        </div>
+      </div>
+      {% assign sorted_posts = site.trainings | sort: 'weight' %}
+      {% for post in sorted_posts %}
+        <div class="row content-section separated">
+          <div class="col-sm-6">
+            <h3>{{post.title}}</h3>
+          </div>
+          <div class="col-sm-6">
+            {{post.description | markdownify}}
+            <a href="{{post.url}}.html" class="custom-button">Learn more</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% include workshop_contact_banner.html %}

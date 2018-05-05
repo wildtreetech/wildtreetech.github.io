@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include nav.html %}
+
+    <div id="main-content">
+      {% include workshop_header.html %}
+
+      <div class="container" id="main-section">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 col-sm-12">
+            <div class="row content-section workshop">
+              <div class="col-sm-12">
+                <div class="workshop-meta">
+                  <span class="category">{{page.category}}</span>
+                </div>
+                <h3>{{page.title}}</h3>
+                <div class="description">
+                  {{page.description | markdownify}}
+                </div>
+              </div>
+            </div>
+            <div class="row content-section workshop">
+              <div class="col-sm-12">
+                {% for stage in page.stages %}
+                  <div class="row stage">
+                    <div class="col-sm-2 number">
+                      <div>
+                        <div class="icon">
+                          <span>{{forloop.index}}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-10">
+                      <div class="stage-meta">
+                        <span class="module">Module {{forloop.index}}</span>
+                        <span class="duration pull-right">Duration: {{stage.duration}} minutes</span>
+                      </div>
+                      <h4>
+                        <span class="number">{{forloop.index}} &mdash; </span>{{stage.title}}
+                      </h4>
+                      {{stage.description | markdownify}}
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% include workshop_contact_banner.html %}
+    </div>
+
+    {% include cookie_banner.html %}
+
+    {% include footer.html %}
+
+    {% include analytics.html %}
+
+  </body>
+</html>

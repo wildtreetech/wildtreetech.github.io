@@ -1,36 +1,70 @@
 <head>
-  <title>Welcome to Wild Tree Tech</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
-  <link rel="stylesheet" href="/assets/css/main.css" />
-  <!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
-  <!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
-
-{% if site.GH_ENV == "gh_pages" %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="keywords" content="machine-learning, data science, data engineering, software engineering, consulting, software architecture, software design, training" />
+  <meta name="language" content="en"/>
+  <meta name="content-language" content="en"/>
+  <meta name="publisher" content="Wild Tree Tech" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-75797246-1', 'auto');
-    ga('send', 'pageview');
-  </script>
-{% endif %}
-  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
-<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-<script>
-window.addEventListener("load", function(){
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#252e39"
-    },
-    "button": {
-      "background": "#14a7d0"
-    }
-  },
-  "theme": "edgeless"
-})});
+$(document).ready(function(){
+  $("#submitbutton").click(function(e){
+    e.preventDefault();
+    if ($('#submitbutton').val() === "Done!"){return;}
+    const email = $('#email')[0].value;
+    console.log(email);
+    $('#submitbutton').val('Sending');
+    $.ajax({
+      url: 'http://wtt-email.herokuapp.com/connect',
+      type: 'POST',
+      data: 'them=' + email,
+      success: function(result){
+        $('#submitbutton').val('Done!');
+      },
+      error: function(result){
+        $('#submitbutton').val('Error');
+      }
+    });
+  });
+});
 </script>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "http://www.wildtreetech.com",
+    "logo": "http://www.wildtreetech.com/images/logo.svg",
+    "contactPoint" : [{
+      "@type" : "ContactPoint",
+      "telephone" : "+41-76-752-8697",
+      "contactType" : "customer service",
+      "availableLanguage" : [
+        "English",
+        "German"
+      ]
+  }]
+  }
+</script>
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "WebSite",
+  "name" : "Wild Tree Tech",
+  "alternateName" : "Wild Tree Technologies",
+  "url" : "http://www.wildtreetech.com"
+}
+</script>
+
+  {% feed_meta %}
+  {% include analytics.html %}
 </head>

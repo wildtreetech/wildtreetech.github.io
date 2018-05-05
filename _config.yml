@@ -1,4 +1,54 @@
-email: hello@wildtreetech.com
+name: wildtreetech.com
+
+sass:
+  sass_dir: css
 
 gems:
   - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+
+excerpt_separator: <!--break-->
+
+navigation:
+  - title: Services
+    url: /services/
+  - title: Training
+    url: /training/
+  - title: Products
+    url: /products/
+  - title: About
+    url: /about/
+
+collections:
+  trainings:
+    output: true
+
+title: Wild Tree Tech
+author: Wild Tree Tech
+description: Data Done Better
+
+url: http://wildtreetech.com
+logo: /images/logo.svg
+
+twitter:
+  username: wildtreetech
+
+exclude: [vendor]
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      image:
+        twitter: /images/logo.svg
+        facebook: /images/logo.svg
+        height: 144
+        width: 144
