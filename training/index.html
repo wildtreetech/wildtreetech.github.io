@@ -5,8 +5,8 @@ title: Training
 
 <div class="primary-banner">
   <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-10">
         <h2>Training</h2>
         <p>These courses will bring your staff up to speed with modern data analysis techniques.</p>
     	</div>
@@ -15,10 +15,10 @@ title: Training
 </div>
 
 <div class="container workshops" id="main-section">
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1 col-sm-12">
+  <div class="row justify-content-center">
+    <div class="col-lg-10 col-md-12">
       <div class="row content-section">
-        <div class="col-sm-12">
+        <div class="col-md-12">
           <p>Training workshops give teams a head start when approaching a new technology, leading to dramatically improved productivity.</p>
           <p>We offer training on data science, data engineering, and artificial intelligence. The training courses are highly interactive, tailored to the participants and strictly limited to ten people per course.</p>
           <p>Along side our tried and tested courses we offer custom in-house training (contact us for details).</p>
@@ -27,10 +27,10 @@ title: Training
       {% assign sorted_posts = site.trainings | sort: 'weight' %}
       {% for post in sorted_posts %}
         <div class="row content-section separated">
-          <div class="col-sm-6">
+          <div class="col-md-6">
             <h3>{{post.title}}</h3>
           </div>
-          <div class="col-sm-6">
+          <div class="col-md-6">
             {{post.description | markdownify}}
             <a href="{{post.url}}.html" class="custom-button">Learn more</a>
           </div>

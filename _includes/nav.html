@@ -1,38 +1,30 @@
-<nav id="main-menu" class="navbar navbar-static-top" role="navigation">
+<nav id="main-menu" class="navbar navbar-expand-lg navbar-light bg-white">
   <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-xs-12">
-        <div class="navbar-header">
-          <span class="navbar-left">
-            <a class="navbar-brand" href="/">
-              <img src="/images/logo.svg" alt="Wild Tree Tech logo">
-              WTT
-            </a>
-          </span>
-          <label for="menu-toggle" class="navbar-toggle collapsed">
-            <i class="fa fa-bars"></i>
-          </label>
-        </div>
-        <input type="checkbox" id="menu-toggle" class="hidden"/>
-          <ul class="nav navbar-nav">
-            <li class="navbar-left">
-              <a class="navbar-brand" href="/">
-                <img src="/images/logo.svg" alt="Wild Tree Tech logo">
-                Wild Tree Tech
-              </a>
-            </li>
-            {% for link in site.navigation %}
-              {% assign active = false %}
-              {% if page.url contains link.url %}
-                {% assign active = 'active' %}
-              {% endif %}
-              <li class="page">
-                <a href="{{link.url}}" class="{{active}}"><span>{{link.title}}</span></a>
-              </li>
-            {% endfor %}
-            <li class="navbar-right"><a href="/contact/">Contact Us</a></li>
-          </ul>
-      </div>
+    <a class="navbar-brand" href="/">
+        <img src="/images/logo.svg" alt="Wild Tree Tech logo">
+        Wild Tree Tech
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+      {% for link in site.navigation %}
+        {% assign active = false %}
+        {% if page.url contains link.url %}
+          {% assign active = 'active' %}
+        {% endif %}
+        <li class="nav-item {{active}}">
+          <a class="nav-link {{active}}" href="{{link.url}}">{{link.title}}{% if page.url contains link.url %} <span class="sr-only">(current)</span>{% endif %}</a>
+        </li>
+      {% endfor %}
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/contact/">Contact Us</a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>

@@ -8,23 +8,15 @@
 #main-menu {
   border-bottom: 1px solid #676767;
 
-  li.page {
-    width: 8%;
+  a.navbar-brand {
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
   }
 
-  a {
-    display: inline-block;
-    border-bottom: none;
-
-    span {
-      border-bottom: 1px solid transparent;
-    }
-
-    &:hover, &.active {
-      span {
-        border-bottom-width: 2px;
-        border-bottom-style: solid;
-      }
+  li.active {
+    a {
+      text-decoration: none;
+      border-bottom: 1px solid;
     }
   }
 
@@ -34,20 +26,6 @@
     vertical-align: -5px;
   }
 
-  .navbar-nav {
-    width: 100%;
-  }
-
-  .navbar-nav > li {
-    float: none;
-    display: inline-block;
-  }
-
-  .navbar-header {
-    .navbar-left {
-      display: none;
-    }
-  }
 }
 
 #main-content {
@@ -109,9 +87,6 @@ p, pre {
 }
 
 ul {
-  margin-left: 0;
-  padding-left: 0;
-
   li {
     margin-left: 1em;
   }
@@ -156,7 +131,7 @@ pre.highlight {
 
 .custom-button, .custom-label {
   display: inline-block;
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
 }
 
@@ -191,6 +166,7 @@ pre.highlight {
 
   &.cookie-banner {
     position: fixed;
+    display: none;
     bottom: 0;
     z-index: 9999;
     background-image: none;
@@ -213,8 +189,6 @@ pre.highlight {
 
     img {
       height: 25px;
-      //display: inline;
-      //vertical-align: -5px;
     }
   }
 }
@@ -336,13 +310,6 @@ pre.highlight {
   }
 }
 
-.twitter-tweet {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  margin-top: 0 !important;
-  margin-bottom: 20px !important;
-}
-
 .article {
   h4, h5 {
     margin-top: 40px;
@@ -438,8 +405,6 @@ pre.highlight {
   }
 
   .description {
-    margin-bottom: 60px;
-
     p {
       width: 83.33333333%;
     }
@@ -451,10 +416,6 @@ pre.highlight {
 
   .stage {
     margin-bottom: 60px;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
 
     p {
       margin: 0 0 20px 0;
@@ -502,63 +463,11 @@ pre.highlight {
   }
 }
 
-#main-content {
-  .content-section {
-    &.workshop {
-      margin-bottom: -60px;
-    }
-  }
-}
-
 .error-page {
   padding-top: 100px;
 }
 
 @media screen and (max-width: 767px) {
-  #main-menu {
-    .navbar-nav {
-      .navbar-left {
-        display: none !important;
-      }
-    }
-
-    .navbar-header {
-      .navbar-left {
-        display: block;
-      }
-    }
-
-    li.page {
-      width: 100%;
-    }
-
-    .navbar-toggle {
-      cursor: pointer;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
-    .navbar-nav {
-      position: absolute;
-      transition: opacity 0.15s ease-in-out;
-      margin-top: 0;
-
-      li {
-        margin-left: 0;
-      }
-    }
-
-    #menu-toggle {
-      &:not(:checked) + .navbar-nav {
-        opacity: 0;
-      }
-
-      &:checked + .navbar-nav {
-        opacity: 1;
-      }
-    }
-  }
-
   #main-content {
     .content-section.separated.split-section:after {
       width: calc(100% - 30px);
@@ -589,14 +498,6 @@ pre.highlight {
             display: inline;
           }
         }
-      }
-    }
-  }
-
-  .case {
-    .content-section {
-      > div:last-of-type {
-        margin-top: 20px;
       }
     }
   }
