@@ -1,9 +1,9 @@
 body {
   //height: 100%;
-  line-height: 1.7;
-  font-weight: 300;
+  //line-height: 1.7;
+  //font-weight: 300;
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
-  letter-spacing: 1px;
+  //letter-spacing: 1px;
   //font-size: 16px;
 }
 
@@ -58,20 +58,20 @@ code {
 
 
 h3, h4 {
-  font-weight: lighter;
+  //font-weight: lighter;
 }
 
 h3 {
-  font-size: 28px;
+  //font-size: 28px;
 }
 
 h4 {
-  font-size: 22px;
+  //font-size: 22px;
 }
 
 h5 {
-  font-size: 18px;
-  font-weight: 300;
+  //font-size: 18px;
+  //font-weight: 300;
 }
 
 .custom-button, .custom-label {
@@ -96,8 +96,6 @@ h5 {
 }
 
 .primary-banner {
-  text-align: center;
-
   h2 {
     font-size: 40px;
     text-transform: uppercase;
@@ -137,14 +135,6 @@ h5 {
 
     .cookie-button {
       text-decoration: none;
-    }
-  }
-}
-
-#main-section.index {
-  .content-section:first-of-type {
-    p {
-      text-align: center;
     }
   }
 }
