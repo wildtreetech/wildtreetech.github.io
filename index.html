@@ -2,14 +2,13 @@
 layout: default
 title:
 ---
-<div class="grid-overlay">
-<div class="primary-banner main-page">
+<div class="primary-banner main-page d-none d-lg-block">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-10 col-md-12">
         <div class="row align-items-center">
           <div class="col-lg-4 col-md-4">
-            <img src="/images/logo.svg" class="img-fluid"
+            <img src="/images/logo.svg" class="img-fluid mx-auto d-block"
             alt="Wild Tree Tech logo"
             style="width: 100% \9">
           </div>
@@ -32,6 +31,25 @@ title:
   </div>
 </div>
 
+<div class="primary-banner main-page container d-print-none d-lg-none">
+  <div class="row my-3">
+    <div class="col-4 d-flex align-items-center">
+      <img src="/images/logo.svg" class="img-fluid mx-auto d-block align-items-center"
+      alt="Wild Tree Tech logo"
+      style="width: 100% \9">
+    </div>
+    <div class="col-8 d-flex align-items-center">
+      <h2 style="font-size: 1.8rem;">Data Done Better</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <p>Building data driven products for our clients.</p>
+      <p>Our team of technology experts builds ambitious solutions for clients all around the world, from startups to UN organisations. We specialise in building digital products that leverage machine-learning and AI. Find out more over cup of coffee or tea.</p>
+    </div>
+  </div>
+</div>
+
 <div class="container index" id="main-section">
   <div class="row justify-content-center">
     <div class="col-lg-10 col-md-12">
@@ -46,13 +64,12 @@ title:
           <div>
             <h4>JupyterCon, New York</h4>
             <p>Tim will be talking about <a href="https://mybinder.org">mybinder.org</a> at JupyterCon 2018 in August. Launched recently the <a href="https://mybinder.org">mybinder.org</a> data science platform is already serving 50000 users every week.</p>
-            <a href="https://conferences.oreilly.com/jupyter/jup-ny" class="custom-button">learn more</a>
+            <a href="https://conferences.oreilly.com/jupyter/jup-ny">Learn more</a>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 
 {% include contact_banner.html %}

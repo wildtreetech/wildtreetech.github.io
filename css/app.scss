@@ -166,6 +166,12 @@ pre.highlight {
     }
   }
 
+  @media (max-width: 767.98px) {
+    h4 {
+      padding-bottom: 10px;
+    }
+  }
+
   .contact-button {
     //margin-top: 4px;
   }
@@ -203,8 +209,7 @@ pre.highlight {
 }
 
 .primary-banner {
-  padding: 20px 0;
-  //height: 180px;
+  padding: 55px 0;
 
   &.main-page {
     padding: 110px 0;
@@ -506,10 +511,23 @@ pre.highlight {
   }
 
   .primary-banner {
-    height: 200px;
+    //padding: 20px 0;
+
+    &.main-page {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      h2 {
+        margin-bottom: unset;
+        margin-top: unset;
+      }
+    }
 
     h2 {
       font-size: 36px;
+      margin-top: 30px;
     }
 
     &.main-page {
