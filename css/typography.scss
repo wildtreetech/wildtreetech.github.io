@@ -15,11 +15,11 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  //border-bottom: 1px solid transparent;
 
   &:hover, &:active, &:focus {
     text-decoration: none;
-    border-bottom: 1px solid;
+    //border-bottom: 1px solid;
   }
 }
 
@@ -54,24 +54,6 @@ code {
   span:first-of-type {
     font-weight: bold;
   }
-}
-
-
-h3, h4 {
-  //font-weight: lighter;
-}
-
-h3 {
-  //font-size: 28px;
-}
-
-h4 {
-  //font-size: 22px;
-}
-
-h5 {
-  //font-size: 18px;
-  //font-weight: 300;
 }
 
 .custom-button, .custom-label {

@@ -4,8 +4,7 @@ title: Python as a Second Language
 weight: 20
 permalink: "/training/python-as-a-second-language"
 category: Python
-description: A one day introduction to programming in Python for people who are already comfortable in some other language such as Perl or MATLAB. This lesson also introduces you to the Jupyter Notebook.
-image: "https://source.unsplash.com/random/256x256"
+description: Python is the fastest growing programming language in high income countries. This course is a one day introduction to programming in Python for people who are already comfortable in some other language such as Perl or MATLAB. This lesson also introduces you to the Jupyter Notebook.
 stages:
 - title: The core language
   description: You will learn about the core of the Python language and how you can leverage the huge range of libraries that come "batteries included". We will see how to make decisions and repeat operations to control the flow of your program. You will learn to make your code more readable by using functions and how to store data in dictionaries.

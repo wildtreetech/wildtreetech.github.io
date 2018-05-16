@@ -20,13 +20,57 @@
 
   a.navbar-brand {
     text-decoration: none;
-    border-bottom: 1px solid transparent;
   }
 
-  li.active {
+  a.nav-link:hover:after {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+    width: 100%;
+    background: #e74c3c;
+    content: '';
+  }
+  a {
+    position: relative;
+  }
+
+  a.active:after {
+    text-decoration: none;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+    width: 100%;
+    background: #e74c3c;
+    content: '';
+  }
+
+  @media screen and (max-width: 767.98px) {
+    a.nav-link:hover:after {
+      position: absolute;
+      left: 12.5%;
+      bottom: -1px;
+      height: 1px;
+      width: 75%;
+      background: #e74c3c;
+      content: '';
+      z-index: 100;
+    }
     a {
+      position: relative;
+    }
+
+    a.active:after {
       text-decoration: none;
-      border-bottom: 1px solid;
+      position: absolute;
+      left: 12.5%;
+      bottom: -1px;
+      height: 1px;
+      width: 75%;
+      background: #e74c3c;
+      content: '';
+      z-index: 90;
     }
   }
 
@@ -166,14 +210,10 @@ pre.highlight {
     }
   }
 
-  @media (max-width: 767.98px) {
+  @media screen and (max-width: 767.98px) {
     h4 {
       padding-bottom: 10px;
     }
-  }
-
-  .contact-button {
-    //margin-top: 4px;
   }
 
   h4 {
