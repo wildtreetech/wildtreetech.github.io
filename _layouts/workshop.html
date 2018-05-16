@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include nav.html %}
+
+    <div id="main-content">
+      {% include workshop_header.html %}
+
+      <div class="container" id="main-section">
+        <div class="row justify-content-center">
+          <div class="col-lg-9 col-md-12">
+            <div class="row content-section workshop">
+              <div class="col-md-12">
+                <h3>{{page.title}}</h3>
+                <div class="description">
+                  {{page.description | markdownify}}
+                </div>
+              </div>
+            </div>
+            <div class="row content-section workshop">
+              <div class="col-md-12">
+                {% for stage in page.stages %}
+                  <div class="row stage">
+                    <div class="col-md-2 number">
+                      <div>
+                        <div class="icon">
+                          <span>{{forloop.index}}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-10">
+                      <div class="stage-meta">
+                        <span class="duration float-right">Duration: {{stage.duration}} minutes</span>
+                      </div>
+                      <h4>
+                        <span class="number">{{forloop.index}} &mdash; </span>{{stage.title}}
+                      </h4>
+                      {{stage.description | markdownify}}
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% include workshop_contact_banner.html %}
+    </div>
+
+    {% include cookie_banner.html %}
+
+    {% include footer.html %}
+
+    {% include analytics.html %}
+
+  </body>
+</html>
