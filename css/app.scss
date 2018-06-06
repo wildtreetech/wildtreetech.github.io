@@ -22,15 +22,6 @@
     text-decoration: none;
   }
 
-  a.nav-link:hover:after {
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    height: 2px;
-    width: 100%;
-    background: #e74c3c;
-    content: '';
-  }
   a {
     position: relative;
   }
@@ -39,8 +30,8 @@
     text-decoration: none;
     position: absolute;
     left: 0;
-    bottom: -10px;
-    height: 2px;
+    bottom: -9px;
+    height: 1px;
     width: 100%;
     background: #e74c3c;
     content: '';
