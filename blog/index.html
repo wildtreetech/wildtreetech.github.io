@@ -1,0 +1,36 @@
+---
+layout: default
+title: Training
+---
+
+<div class="primary-banner">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9 col-md-12">
+        <h2>Blog</h2>
+        <p>The Wild Tree Tech blog.</p>
+    	</div>
+    </div>
+  </div>
+</div>
+
+<div class="container workshops" id="main-section">
+  <div class="row justify-content-center">
+    <div class="col-lg-9 col-md-12">
+      {% assign sorted_posts = site.blogs | sort: 'weight' %}
+      {% for post in sorted_posts %}
+        <div class="row content-section separated">
+          <div class="col-md-6">
+            <h3><a href="{{post.url}}.html">{{post.title}}</a></h3>
+          </div>
+          <div class="col-md-6">
+            {{post.description | markdownify}}
+            <a href="{{post.url}}.html" class="custom-button">Read more</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% include contact_banner.html %}

@@ -23,11 +23,15 @@ navigation:
     url: /training/
   - title: Products
     url: /products/
+  - title: Blog
+    url: /blog/
   - title: About
     url: /about/
 
 collections:
   trainings:
+    output: true
+  blogs:
     output: true
 
 title: Wild Tree Tech
