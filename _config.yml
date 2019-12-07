@@ -17,12 +17,6 @@ kramdown:
 excerpt_separator: <!--break-->
 
 navigation:
-  - title: Services
-    url: /services/
-  - title: Training
-    url: /training/
-  - title: Products
-    url: /products/
   - title: About
     url: /about/
 
