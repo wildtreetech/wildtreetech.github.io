@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
+  {% capture extra_head %}
+  <link rel="stylesheet" href="https://codemirror.net/theme/monokai.css" />
+  <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/316871/summerfruit.css" />
+  <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/316871/fairyfloss.css" />
+  {% endcapture %}
+  {% include head.html extra=extra_head %}
+
   <body>
     {% include nav.html %}
 
