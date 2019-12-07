@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% capture extra_head %}
+  <link rel="stylesheet" href="https://codemirror.net/theme/monokai.css" />
+  <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/316871/summerfruit.css" />
+  <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/316871/fairyfloss.css" />
+  {% endcapture %}
+  {% include head.html extra=extra_head %}
+
+  <body>
+    {% include nav.html %}
+
+    <div class="primary-banner">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9 col-md-12">
+            <h2>{{page.title}}</h2>
+            {{page.description | markdownify}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4 mb-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 col-md-12">
+          {{ page.content }}
+        </div>
+      </div>
+    </div>
+
+    {% include contact_banner.html %}
+
+    {% include footer.html %}
+
+    {% include analytics.html %}
+
+  </body>
+</html>
